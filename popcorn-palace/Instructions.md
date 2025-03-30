@@ -79,7 +79,7 @@ POST /showtimes/update{showtimeid} , the same as the before operation but if a s
   "showtimeId": 3,
   "movieId": 1 *this field has to be null in the request body
 }
-constaints: seatNumber is positive int, there as to be a showtime with id equal to the given showtimeId, (seatNumber, showtimeId) is unique
+constaints: seatNumber is positive int, there as to be a showtime with id equal to the given showtimeId, (seatNumber, showtimeId) is unique , userId must be longer then 10
 
 POST /booking , the request body needs do look like 
 {

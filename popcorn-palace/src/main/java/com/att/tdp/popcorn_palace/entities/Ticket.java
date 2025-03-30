@@ -41,8 +41,8 @@ public class Ticket {
     private int seatNumber;
     
     @NotNull(message = "requests must contain userId")
-    @Size(max = 200, message = "your user id cant be that long")
-    @Size(min = 10, message = "your user id cant be too short")
+    @Size(max = 200, message = "your userId must be shorter then 200")
+    @Size(min = 10, message = "your userId must be longer then 10")
     @Column(name="user_id", nullable=false)
     private String userId;
 
