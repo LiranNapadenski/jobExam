@@ -5,16 +5,19 @@ spring:
   application:
     name: popcorn-palace
   datasource:
-    url: jdbc:postgresql://localhost:5432/popcorn-palace
+    url: jdbc:postgresql://localhost:5433/popcorn-palace
     username: popcorn-palace
     password: popcorn-palace
-    driverClassName: org.postgresql.Driver
-    platform: postgres
+    driver-class-name: org.postgresql.Driver
   jpa:
     database: POSTGRESQL
     show-sql: true
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   sql:
     init:
       mode: always
+      platform: postgres
